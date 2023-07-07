@@ -1,22 +1,344 @@
-@import "roboto.css";
+
 @import "~normalize.css";
 
-body {
-	font-family: 'Roboto', sans-serif;
+* {
+	margin : 0;
+	padding : 0;
+	box-sizing : border-box;
 }
-.container {
-	padding-top: 2rem;
-	max-width: 1000px;
-	margin: 0 auto;
+body	{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: #E0E0E0;
+}
+.wrapper {
+
+	width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+.block {
+	position: relative;
+	width:100%;
+	height: 456px;
+	background:#CAFFA0;
+	border-radius: 24px;
+}
+.block-content {
+	display: flex;
+	justify-content: space-between;
+}
+.block-content-text_block{
+	width: 400px;
+	height: 40px;
+}
+.block-content-text_img{
+position: absolute;
+width: 98px;
+height: 36px;
+left: 165px;
+top: 205px;
+background: #FFFFFF;
+border-radius: 34px;
+transform: rotate(-6.97deg);
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #383838;
+z-index: 2;
+padding: 9px;
+}
+.block-content-text_img2{
+position: absolute;
+width: 120px;
+height: 36px;
+left: 203.57px;
+top: 236.66px;
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #383838;
+background: #CAFFA0;
+border: 1px solid #383838;
+border-radius: 34px;
+transform: rotate(4.62deg);
+padding: 9px;
+}
+.block-content-text_img3{
+position: absolute;
+width: 239.7px;
+height: 155.2px;
+left: 74px;
+top: 261.79px;
+background: linear-gradient(360deg, #FBFFDE 0%, #BFFF93 100%);
+border-radius: 16px;
+transform: skew(10deg);
+}
+.block-content-text_img4{
+position: absolute;
+width: 73.12px;
+height: 73.12px;
+left:58px;
+top: 290px;
+border-radius: 50%;
+border: 1.2px solid #383838;
+}
+.block-content-text_img5{
+position: absolute;
+width: 40px;
+height: 0;
+left: 38px;
+top: 369px;
+border: 1.2px solid #383838;
+transform: rotate(-45deg);
+
 }
 h1 {
-	text-align: center;
-	font-size: 30px;
+font-family: 'Onest', sans-serif;
+font-weight: 500;
+font-size: 32px;
+padding-top: 32px;
+padding-left: 32px;
 }
-.logo {
-	background-image: url("../assets/prud.jpg");
-	background-size: cover;
-	height: 200px;
-	width: 200px;
-	margin: 0 auto;
+.block-content-text_paragraph {
+padding-left: 32px;
+padding-top: 16px;
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #383838;
+opacity: 0.7;
+}
+.block-content-form_paragraph {
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #9B9B9B;
+}
+.block-content-text {
+}
+.block-content-form {
+margin-top: 32px;
+margin-right: 32px;
+width: 576px;
+height: 392px;
+background: #FFFFFF;
+border-radius: 24px;
+display: none;
+}
+.block-content-form_text {
+display: flex;
+justify-content: space-between;
+padding: 32px 32px 32px 32px;
+}
+.radio {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 16px;
+	width: 252px;
+	height: 56px;
+	background: #F5F5F5;
+	border-radius: 16px;
+}
+.block-content-form_radio {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap:8px;
+}
+label {
+	font-family: 'Onest', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+h4 {
+	font-family: 'Onest', sans-serif;
+	color: #383838;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.form_button {
+/*font-family: 'Onest', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #fff;
+background: #383838;
+border-radius: 12px;
+width: 108px;
+height: 44px;
+margin: 56px 40px 0 0;*/
+
+font-family: 'Onest', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+color: #000;
+border-radius: 12px;
+background: #fff;
+width: 108px;
+height: 44px;
+border: 1px solid #D8D8D8;
+border-radius: 12px;
+margin-right: 32px;
+margin-top: 56px;
+}
+
+.button-active {
+	color: #fff;
+	background: #383838;
+}
+.form_button:hover {
+	color: #fff;
+	background: grey;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+
+}
+.block-content-form_button-back:hover{
+	color: #fff;
+	background: grey;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+}
+
+.block-content-form_button-back{
+font-family: 'Onest', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+color: #000;
+border-radius: 12px;
+background: #fff;
+width: 108px;
+height: 44px;
+border: 1px solid #D8D8D8;
+border-radius: 12px;
+margin-left: 32px;
+margin-top: 56px;
+}
+.two-buttons{
+	margin-top: 110px;
+}
+.block-content-form_button {
+	display: flex;
+	justify-content: flex-end;
+}
+.block-content-form_button-select{
+	display: flex;
+	justify-content: space-between;
+}
+.select{
+width: 512px;
+height: 56px;
+border: 1px solid #383838;
+border-radius: 16px;
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #383838;
+margin-left: 32px;
+padding: 16px;
+}
+span{
+position: relative;
+left: 55px;
+top: 20px;
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 12px;
+color: #9B9B9B;
+}
+.select_step7{
+width: 512px;
+height: 56px;
+border: none;
+border-radius: 16px;
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #383838;
+margin-left: 32px;
+padding: 16px;
+background: #F5F5F5;
+}
+.block-content-form_radio-column{
+display: flex;
+flex-direction: column;
+gap:8px;
+}
+.column{
+width: 512px;
+height: 56px;
+margin-left: 32px;
+}
+.form-text{
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 12px;
+text-align: center;
+color: #9B9B9B;
+padding-top: 8px;
+}
+.block-content-form_text-column{
+display: flex;
+flex-direction: column;
+gap:8px;
+}
+.text{
+width: 512px;
+height: 56px;
+border: none;
+background: #F5F5F5;
+border-radius: 16px;
+padding: 18px 0 18px 16px;
+margin-left: 32px;
+}
+::placeholder {
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: #9B9B9B;
+}
+.send-button{
+font-family: 'Onest', sans-serif;
+font-weight: 400;
+font-size: 16px;
+width: 512px;
+height: 56px;
+color: #fff;
+background: #383838;
+border-radius: 16px;
+margin-left: 32px;
+margin-top: 8px;
+cursor: pointer;
+}
+a{
+	color: #383838;
+}
+
+.form-hidden {
+/*visibility: hidden;*/
+display: none;
+}
+
+.active{
+display: block;
+animation-duration: 1.5s;
+animation-fill-mode: both;
+animation-name: fadeIn;
 }

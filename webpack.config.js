@@ -28,11 +28,13 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill', path.resolve(__dirname,'./src/index.jsx')],
+    main: ['@babel/polyfill', path.resolve(__dirname, 'src', 'index.js')],
     },
   output: {
-     path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
     filename: '[name].[contenthash].js',
+    assetModuleFilename: 'assets/[name][ext]',
     },
     resolve: {
       extensions: ['.js', '.json','.png','.jpg'],
@@ -46,19 +48,8 @@ module.exports = {
     devtool: isDev ? 'source-map' : false,
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/index.html'),
-      minify: {
-        collapseWhitespace: isProd
-      }
-    }),
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-        from: path.resolve(__dirname, 'src/favicon.ico'),
-        to: path.resolve(__dirname, 'dist')
-        }
-      ]
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
