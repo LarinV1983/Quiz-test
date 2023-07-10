@@ -36,6 +36,20 @@ function clickRadioButton() {
 		removeAdd();
 		}
 
+		function getData() {
+			const requestURL = '#';
+			const xhr = new XMLHttpRequest();
+			xhr.open('POST', requestURL);
+			xhr.onload = () => {
+				alert('Данные полностью загружены на сервер!');
+				}
+				xhr.send();
+			}
+		
+		document.querySelector('.send-button').addEventListener('click', () => {
+			getData();
+		});
+
 	radioButton.forEach((radioButtons) => {
 		radioButtons.addEventListener('change', clickRadioButton);
 	});
