@@ -17,8 +17,7 @@ function removeAdd() {
 
 function clickRadioButton() {
 		if (radioButton.checked = true) {
-			let buttonActive = document.querySelector('.form_button');
-    	buttonActive.classList.add('button-active');
+			buttonNext[i].classList.add('button-active');
 			removeAdd();
 		}
 	}
